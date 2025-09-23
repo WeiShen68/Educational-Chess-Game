@@ -1,0 +1,33 @@
+// Outline Card
+.v-card--variant-outlined {
+    border-color: rgba(208, 208, 208, 0.36);
+
+    // .v-divider {
+    //     border-color: rgba(208, 208, 208, 0.36);
+    // }
+}
+
+.v-card-text {
+    padding: 24px;
+}
+
+.v-card {
+    width: 100%;
+    overflow: visible;
+
+    &.withbg {
+        background-color: rgb(255, 255, 255);
+    }
+
+    &.overflow-hidden {
+        overflow: hidden;
+    }
+}
+
+.v-card-item {
+    padding: 20px 24px;
+}
+
+.dialog-bg {
+    background-image: linear-gradient(to top, #f5f7fa 55%, #c3cfe2 100%) !important;
+}  

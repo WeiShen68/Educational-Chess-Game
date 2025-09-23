@@ -1,0 +1,10 @@
+
+@use './variables' as *;
+@use 'vuetify/styles/main.sass' as *;
+@use './layout/container' as *;
+@use './layout/sidebar' as *;
+
+@use './component/VButtons' as *;
+@use './component/VCard' as *;
+
+@import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
