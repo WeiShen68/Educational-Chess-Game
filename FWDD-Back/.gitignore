@@ -40,11 +40,6 @@ Thumbs.db
 .cache/
 .eslintcache
 
-# Database dumps
-*.sql
-*.sqlite
-*.sqlite3
-
 # Misc
 node_repl_history
 package-lock.json
