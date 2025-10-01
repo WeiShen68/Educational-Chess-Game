@@ -101,11 +101,22 @@
 
     .scrollnavbar .v-list .v-list-group__items,
     .hide-menu {
-        opacity: 0;
+        display: none;
     }
 
-    .leftPadding {
-        margin-left: 0px;
+    /* Hide all list item text and trailing content in rail mode */
+    .v-list-item-title,
+    .v-list-item__append {
+        display: none;
+    }
+
+    /* Tighten spacing so icons are centered within rail */
+    .v-list-item {
+        padding-inline-start: 12px !important;
+    }
+
+    .v-list-item .v-list-item__prepend {
+        margin-inline-end: 0;
     }
 }
 @media only screen and (min-width: 1170px) {
@@ -124,9 +135,23 @@
                 width: 100%;
             }
 
+            /* Restore visibility and spacing when drawer expands on hover */
             .v-list .v-list-group__items,
             .hide-menu {
-                opacity: 1;
+                display: block;
+            }
+
+            .v-list-item-title,
+            .v-list-item__append {
+                display: block;
+            }
+
+            .v-list-item {
+                padding-inline-start: calc(12px + var(--indent-padding) / 2) !important;
+            }
+
+            .v-list-item .v-list-item__prepend {
+                margin-inline-end: 13px;
             }
         }
     }
