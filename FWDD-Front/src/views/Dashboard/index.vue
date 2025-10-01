@@ -1,7 +1,7 @@
 <template>
     <v-row class="ma-0" style="min-height: calc(100dvh - 110px);">
         <v-col cols="12" class="pa-0">
-            <v-card variant="outlined" elevation="2"
+            <v-card variant="outlined" elevation="0"
                 class="withbg d-flex justify-center align-center text-center flex-column position-relative" style="height: 100%;">
 
                 <div class="w-100 text-center">

@@ -1,7 +1,7 @@
 <template>
     <v-row class="ma-0" style="min-height: calc(100dvh - 110px);">
         <v-col cols="12" class="pa-0">
-            <v-card variant="outlined" elevation="2" class="withbg pa-4 d-flex justify-center align-center flex-column position-relative" style="height: 100%;">
+            <v-card variant="outlined" elevation="0" class="withbg pa-4 d-flex justify-center align-center flex-column position-relative" style="height: 100%;">
                 <v-btn icon variant="tonal" class="position-absolute bg-lightsecondary text-secondary"
                     style="top: 16px; left: 16px;" @click="handleLeave">
                     <v-icon>mdi-arrow-left</v-icon>
