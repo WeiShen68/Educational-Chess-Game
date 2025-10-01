@@ -7,6 +7,29 @@
     }
 }
 
+/* Restore text when drawer is opened on mobile */
+@media only screen and (max-width: 1169px) {
+    .v-navigation-drawer--active {
+        .v-list .v-list-group__items,
+        .hide-menu {
+            display: block;
+        }
+
+        .v-list-item-title,
+        .v-list-item__append {
+            display: block;
+        }
+
+        .v-list-item {
+            padding-inline-start: calc(12px + var(--indent-padding) / 2) !important;
+        }
+
+        .v-list-item .v-list-item__prepend {
+            margin-inline-end: 13px;
+        }
+    }
+}
+
 .scrollnavbar {
     height: calc(100vh - 100px) !important;
 
