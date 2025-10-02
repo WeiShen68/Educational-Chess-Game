@@ -1,23 +1,39 @@
+@use 'sass:math';
+@use 'sass:map';
+@use 'sass:meta';
 @use 'vuetify/lib/styles/tools/functions' as *;
 
+// Global font size and border radius
 $border-radius-root: 12px;
+$body-font-family: 'Roboto', sans-serif !default;
 
-$rounded: 
-  (
-    0: 0,
-    'sm': $border-radius-root * 0.5,
-    null: $border-radius-root,
-    'md': $border-radius-root * 1,
-    'lg': $border-radius-root * 2,
-    'xl': $border-radius-root * 6,
-    'pill': 9999px,
-    'circle': 50%,
-    'shaped': $border-radius-root * 6 0
-  );
+// Vuetify overrides
+@use 'vuetify/styles' with (
+  // This will false all colors which is not necessory for theme
+  // $color-pack: false,
 
-$typography: () !default;
-$typography: map-deep-merge(
-  (
+  // global font family
+  $body-font-family: $body-font-family,
+  $heading-font-family: $body-font-family,
+
+  // Global Radius as per breakeven point
+  $rounded: (
+      (
+        0: 0,
+        'sm': $border-radius-root * 0.5,
+        null: $border-radius-root,
+        'md': $border-radius-root * 1,
+        'lg': $border-radius-root * 2,
+        'xl': $border-radius-root * 6,
+        'pill': 9999px,
+        'circle': 50%,
+        'shaped': $border-radius-root * 6 0
+      )
+    ),
+
+  // Global Typography
+  $font-size-root: 1rem,
+  $typography: (
     'h1': (
       'size': 2.125rem,
       'weight': 700,
@@ -92,6 +108,5 @@ $typography: map-deep-merge(
       'font-family': inherit,
       'text-transform': uppercase
     )
-  ),
-  $typography
+  )
 );

@@ -7,29 +7,6 @@
     }
 }
 
-/* Restore text when drawer is opened on mobile */
-@media only screen and (max-width: 1169px) {
-    .v-navigation-drawer--active {
-        .v-list .v-list-group__items,
-        .hide-menu {
-            display: block;
-        }
-
-        .v-list-item-title,
-        .v-list-item__append {
-            display: block;
-        }
-
-        .v-list-item {
-            padding-inline-start: calc(12px + var(--indent-padding) / 2) !important;
-        }
-
-        .v-list-item .v-list-item__prepend {
-            margin-inline-end: 13px;
-        }
-    }
-}
-
 .scrollnavbar {
     height: calc(100vh - 100px) !important;
 
@@ -68,6 +45,15 @@
         .v-list-item-title {
             font-size: 0.875rem;
         }
+
+        .v-list-item__content {
+            min-width: unset;
+        }
+    }
+
+    .v-list-group__items .v-list-item {
+        margin-inline-start: calc(2px + var(--indent-padding) / 2);
+        padding-inline-start: 16px !important;
     }
 
     .leftPadding {
@@ -124,22 +110,11 @@
 
     .scrollnavbar .v-list .v-list-group__items,
     .hide-menu {
-        display: none;
+        opacity: 0;
     }
 
-    /* Hide all list item text and trailing content in rail mode */
-    .v-list-item-title,
-    .v-list-item__append {
-        display: none;
-    }
-
-    /* Tighten spacing so icons are centered within rail */
-    .v-list-item {
-        padding-inline-start: 12px !important;
-    }
-
-    .v-list-item .v-list-item__prepend {
-        margin-inline-end: 0;
+    .leftPadding {
+        margin-left: 0px;
     }
 }
 @media only screen and (min-width: 1170px) {
@@ -158,23 +133,9 @@
                 width: 100%;
             }
 
-            /* Restore visibility and spacing when drawer expands on hover */
             .v-list .v-list-group__items,
             .hide-menu {
-                display: block;
-            }
-
-            .v-list-item-title,
-            .v-list-item__append {
-                display: block;
-            }
-
-            .v-list-item {
-                padding-inline-start: calc(12px + var(--indent-padding) / 2) !important;
-            }
-
-            .v-list-item .v-list-item__prepend {
-                margin-inline-end: 13px;
+                opacity: 1;
             }
         }
     }
